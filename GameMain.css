@@ -1,0 +1,35 @@
+/*이미지 꽉차게*/
+img{
+    position: fixed; top:0; left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+/*div 가운대정렬*/
+.Button{
+    position: fixed;
+    left: 50%;
+    bottom: 12.5%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+
+}
+
+.start{
+    display: inline-block;
+    margin: 0 10px;
+    padding: 20px 40px;
+    background-color: #6190f4;
+    color: rgb(12, 1, 2);
+    font-size: 1.5em;
+    font-weight: bold;
+    border:none;
+    cursor: pointer;
+    transition: background-color 0.3s,transform 0.2s;
+}
+
+.start:hover{
+    background-color: #7561f4;
+    transform: scale(120%);
+}
