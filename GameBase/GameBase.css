@@ -1,0 +1,91 @@
+html,body {height:100%; margin:0; padding:0;}
+header{
+    width: 100%; height: 10%; background-color: rgb(62, 49, 180);
+}
+/*이미지 꽉차게*/
+.Background{
+    position: fixed; top:0; left:0;
+    width: 100vw;
+    height: 100vh;
+    height:100%; 
+    margin:0; 
+    padding:0;
+    background-image: url("PresidentGround.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input.arrleft {
+    background: url("left.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: fixed; top:50%; left: 0%;
+}
+input.arrright {
+    background: url("right.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: fixed; top:50%; right: 0%;
+}
+input.arrup {
+    background: url("up.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: fixed; top:0%; right: 50%;
+}
+input.arrdown {
+    background: url("down.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: fixed; top:70%; right: 50%;
+}
+
+p{
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-style: unset;
+}
+#Mesage{
+    border:20px ridge rgb(90, 11, 11);
+    border-radius : 5px 40px 80px;
+    width: 90%;
+    padding: 50px;
+    position: fixed; top:80%; 
+    font-size: large;
+    text-align: left;
+    position:fixed; left: 5%;
+}
+#Name{
+    border:5px ridge rgb(90, 11, 11);
+    border-radius : 5px 10px 20px;
+    width: 5%;
+    padding: 10px;
+    position: fixed; top:40%; 
+    font-size: medium;
+    text-align: center;
+    position:fixed; top:75%; left: 5%;
+}
+#Place{
+    border-radius : 50px;
+    padding: 30;
+    width: 20%;
+    position: fixed; top:0%; left: 0%; 
+    font-size: medium;
+    text-align: center;
+}
+#Slot{
+    border: rgb(176, 201, 65);
+    border-radius : 0px 25px;
+    width: 30%;
+    padding: 50px;
+    position: fixed; top:0%; right: 0%;
+}
