@@ -1,0 +1,42 @@
+User
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url(../GameBase/GameBase.css);
+        .Background{
+            background-image: url("../back_image/관공서빈방.png");
+        }
+    </style>
+
+<head>
+<meta charset="utf-8">
+<title>장소: 관사의 방</title>
+</head>
+<script src="../GameBase/GameBase.js"></script>
+<body>
+<div class="Background">
+    <div class="Button">
+        <input type="button" class="arrup" onclick="location.href='../[5]관사장복도/GameBase.html'">
+    </div>
+    <div class = "SlotInfo">
+        <p id = "Slot">안에 아이템 넣기</p>
+    </div>
+
+    <div class = "PlaceInfo">
+        <p id = "Place" >
+            <script>
+                document.write(Map[3])
+            </script>
+        </p>
+    </div>
+
+    <div class = "Name">
+        <p id = "Name">이름</p>
+    </div>
+    <div class = "Message">
+        <p id = "Message">해당 대화문은 mesagestruct에서 찾아서 적용</p>
+    </div>
+</div>
+
+</body>
+</html>
