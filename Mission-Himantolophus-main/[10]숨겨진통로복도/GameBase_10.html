@@ -4,36 +4,37 @@ User
     <style>
         @import url(../GameBase/GameBase.css);
         .Background{
-            background-image: url("../back_image/퍼즐방.png");
+            background-image: url("../back_image/숨겨진통로_안.png");
         }
     </style>
 
 <head>
 <meta charset="utf-8">
-<title>장소: 관사장 지하 복도</title>
+<title>장소: 숨겨진 통로 복도</title>
 </head>
 <script src="../GameBase/GameBase.js"></script>
-<script src="doorclick.js"></script>
 <body>
-<div class="Background" onmousedown="mouseFunc(event)">
+<div class="Background">
     <div class="Button">
-        <input type="button" class="arrup" onclick="location.href='../[9]숨겨진통로앞/GameBase.html'">
+        <input type="button" class="nextmessage" onclick="location.href='../[10]숨겨진통로복도/GameBase_11.html'">
     </div>
     <div class = "SlotInfo">
         <p id = "Slot">안에 아이템 넣기</p>
     </div>
+
     <div class = "PlaceInfo">
         <p id = "Place" >
             <script>
-                document.write(Map[6])
+                document.write(Map[8])
             </script>
         </p>
     </div>
+
     <div class = "Name">
-        <p id = "Name">칼릭</p>
+        <p id = "Name">반</p>
     </div>
     <div class = "Message">
-        <p id = "Message">그럼 이 퍼즐들을 풀어볼까요?</p>
+        <p id = "Message">비록 라베니아와의 화친 기회는 놓쳤지만 이번 일을 기회로 급진파를 견제할 수 있을겁니다.</p>
     </div>
 </div>
 
