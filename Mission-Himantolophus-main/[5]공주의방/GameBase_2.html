@@ -4,21 +4,19 @@ User
     <style>
         @import url(../GameBase/GameBase.css);
         .Background{
-            background-image: url("../back_image/복도_1.png");
+            background-image: url("../back_image/방_3.png");
         }
     </style>
 
 <head>
 <meta charset="utf-8">
-<title>장소: 복도</title>
+<title>장소: 공주의 방</title>
 </head>
 <script src="../GameBase/GameBase.js"></script>
 <body>
 <div class="Background">
     <div class="Button">
-        <input type="button" class="arrleft" onclick="alert('문이 잠겨있다.')">
-        <input type="button" class="arrright" onclick="alert('문이 잠겨있다.')">
-        <input type="button" class="arrup" onclick="location.href='../[3]계단/GameBase_2.html'">
+        <input type="button" class="nextmessage" onclick="location.href='../[5]공주의방/GameBase_3.html'">
     </div>
     <div class = "SlotInfo">
         <p id = "Slot">안에 아이템 넣기</p>
@@ -27,7 +25,7 @@ User
     <div class = "PlaceInfo">
         <p id = "Place" >
             <script>
-                document.write(Map[1])
+                document.write(Map[4])
             </script>
         </p>
     </div>
@@ -36,7 +34,8 @@ User
         <p id = "Name">반</p>
     </div>
     <div class = "Message">
-        <p id = "Message">계단으로</p>
+        <p id = "Message">'없어? 그의 말대로라면 여기 계실텐데'(방문을 닫고)
+        </p>
     </div>
 </div>
 

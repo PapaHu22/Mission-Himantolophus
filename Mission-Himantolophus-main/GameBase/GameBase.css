@@ -47,6 +47,14 @@ input.arrdown {
     height: 100px;
     position: fixed; top:70%; right: 50%;
 }
+input.nextmessage {
+    background: url("right.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: fixed; top: 75%; right: 0%;
+}
 
 p{
     background-color: rgb(255, 255, 255);
@@ -66,7 +74,7 @@ p{
 #Name{
     border:5px ridge rgb(90, 11, 11);
     border-radius : 5px 10px 20px;
-    width: 5%;
+    width: 8%;
     padding: 10px;
     position: fixed; top:40%; 
     font-size: medium;

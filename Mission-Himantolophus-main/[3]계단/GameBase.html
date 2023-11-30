@@ -4,21 +4,19 @@ User
     <style>
         @import url(../GameBase/GameBase.css);
         .Background{
-            background-image: url("../back_image/복도_1.png");
+            background-image: url("../back_image/계단_2.png");
         }
     </style>
 
 <head>
 <meta charset="utf-8">
-<title>장소: 복도</title>
+<title>장소: 계단</title>
 </head>
 <script src="../GameBase/GameBase.js"></script>
 <body>
 <div class="Background">
     <div class="Button">
-        <input type="button" class="arrleft" onclick="alert('문이 잠겨있다.')">
-        <input type="button" class="arrright" onclick="alert('문이 잠겨있다.')">
-        <input type="button" class="arrup" onclick="location.href='../[3]계단/GameBase_2.html'">
+        <input type="button" class="arrup" onclick="location.href='../[4]11층복도/GameBase.html'">
     </div>
     <div class = "SlotInfo">
         <p id = "Slot">안에 아이템 넣기</p>
@@ -27,7 +25,7 @@ User
     <div class = "PlaceInfo">
         <p id = "Place" >
             <script>
-                document.write(Map[1])
+                document.write(Map[2])
             </script>
         </p>
     </div>
@@ -36,7 +34,7 @@ User
         <p id = "Name">반</p>
     </div>
     <div class = "Message">
-        <p id = "Message">계단으로</p>
+        <p id = "Message">적들이 올라오고 있다. 빨리 11층으로 올라가자</p>
     </div>
 </div>
 

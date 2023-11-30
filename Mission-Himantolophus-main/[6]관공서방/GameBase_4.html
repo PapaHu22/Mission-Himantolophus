@@ -4,21 +4,19 @@ User
     <style>
         @import url(../GameBase/GameBase.css);
         .Background{
-            background-image: url("../back_image/복도_1.png");
+            background-image: url("../back_image/관공서빈방.png");
         }
     </style>
 
 <head>
 <meta charset="utf-8">
-<title>장소: 복도</title>
+<title>장소: 관공서 방</title>
 </head>
 <script src="../GameBase/GameBase.js"></script>
 <body>
 <div class="Background">
     <div class="Button">
-        <input type="button" class="arrleft" onclick="alert('문이 잠겨있다.')">
-        <input type="button" class="arrright" onclick="alert('문이 잠겨있다.')">
-        <input type="button" class="arrup" onclick="location.href='../[3]계단/GameBase_2.html'">
+        <input type="button" class="nextmessage" onclick="location.href='../[6]관공서방/GameBase_5.html'">
     </div>
     <div class = "SlotInfo">
         <p id = "Slot">안에 아이템 넣기</p>
@@ -27,16 +25,17 @@ User
     <div class = "PlaceInfo">
         <p id = "Place" >
             <script>
-                document.write(Map[1])
+                document.write(Map[5])
             </script>
         </p>
     </div>
 
     <div class = "Name">
-        <p id = "Name">반</p>
+        <p id = "Name">알루시아</p>
     </div>
     <div class = "Message">
-        <p id = "Message">계단으로</p>
+        <p id = "Message">하지만 민간인으로 위장하고 밖에서 대기하고 있을 겁니다.</br>
+        누가 민간인이고 적인지 구분이 안되는 상황에서 밖으로 나가는 건 위험부담이 큽니다.</p>
     </div>
 </div>
 
