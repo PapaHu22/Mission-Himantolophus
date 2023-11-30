@@ -87,32 +87,3 @@ a{
     .anything_menubarbutton{
         display: block;
     }
-
-    .anything_menu.active,
-    .anything_icons.active{
-        display: flex;
-    }
-}
-
-/* @media screen and (max-width: 768px) {
-   
-
-    .anything_menu li{
-        width: 100%;
-        text-align: center;
-    }
-
-    .anything_icons{
-        justify-content: center;
-        width: 100%;
-    }
-
-    .anything_tooglemenubarbutton{
-        display: block;
-    }
-
-    .anything_menu.active,
-    .anything_icons.active{
-        display: flex;
-    }
-} */
