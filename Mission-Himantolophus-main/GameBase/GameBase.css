@@ -81,6 +81,16 @@ p{
     text-align: center;
     position:fixed; top:75%; left: 5%;
 }
+.character-image {
+    width: 600px; 
+    height: 800px; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; /
+}
+
 #Place{
     border-radius : 50px;
     padding: 30;
@@ -88,23 +98,6 @@ p{
     position: fixed; top:0%; left: 0%; 
     font-size: medium;
     text-align: center;
-}
-#Slot{
-    border: rgb(176, 201, 65);
-    border-radius : 0px 25px;
-    width: 30%;
-    padding: 50px;
-    position: fixed; top:0%; right: 0%;
-    
-}
-.SlotInfo {
-    display: flex; /* flexbox 레이아웃 사용 */
-    flex-wrap: wrap; /* 아이템이 여러 줄로 표시되도록 설정 */
-    justify-content: flex-start; /* 아이템을 왼쪽 정렬 */
-    align-items: center; /* 아이템을 수직 중앙 정렬 */
-    padding: 10px; /* 내부 여백 설정 */
-    max-width: 400px; /* SlotInfo 영역의 최대 너비 설정 */
-    margin: auto; /* 중앙 정렬 */
 }
 
 /* 아이템 이미지 스타일 */

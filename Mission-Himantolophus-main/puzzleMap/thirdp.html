@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html>
-<style>
-    @import url(../GameBase/GameBase.css);
-    .Background{
+<head>
+    <meta charset="utf-8">
+    <title>세번째 문</title>
+    <style>
+        @import url(../GameBase/GameBase.css);
+        .Background {
             background-image: url("3P.jpg");
         }
-    section { width: 70%; height: 20%; margin:auto;
-          text-align : center; font-style:normal; font-size: 60px; color:white; font-weight: 900;
-        
-background: rgba(0, 0, 0, 0.438); }
-</style>
-<script>
-    //정답확인 스크립트.
-    
-</script>
-<head>
-<meta charset="utf-8">
-<title>세번째 문</title>
+        section { 
+            width: 70%; 
+            height: 20%; 
+            margin:auto;
+            text-align : center; 
+            font-style:normal; 
+            font-size: 60px; 
+            color:white; 
+            font-weight: 900;
+            background: rgba(0, 0, 0, 0.438); 
+        }
+        input[type="text"] {
+            font-size: 40px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            font-size: 30px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<style></style>
-<script src="GameBase.js"></script>
 <body>
-<div class="Background">
-    <section>
-        문제! <br>
-        공주의 이름은 무엇인가?
-    </section>
+    <div class="Background">
+        <section>
+            문제! <br>
+            공주의 이름은 무엇인가?
+        </section>
 
-    <section>
-        <form name="fo" method="get">
-        정답 : <input type="text" size="60" value="">
-        </form>
-    </section>
-    
+        <section>
+            <form id="answerForm" onsubmit="return checkAnswer()">
+                정답 : <input type="text" id="answer" size="20" value="">
+                <input type="submit" value="확인">
+            </form>
+        </section>
+    </div>
 
-</div>
-
+    <script>
+        function checkAnswer() {
+            var userInput = document.getElementById('answer').value.trim();
+            if (userInput.toLowerCase() === "알루시아") {
+                setTimeout(() => {
+                    alert('철컥! 어디서 문이 열렸다.');
+                }, 300);
+                setTimeout(() => {
+                    location.href = "../[8]관공서지하복도/GameBase.html";
+                }, 500);
+                return false; 
+            } else {
+                alert('오답!');
+                return false; 
+            }
+        }
+    </script>
 </body>
 </html>

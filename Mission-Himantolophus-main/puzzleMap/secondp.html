@@ -77,7 +77,6 @@
   <div class="wall block" style="top: 50px; left: 550px;"></div>
   <div class="wall block" style="top: 50px; left: 500px;"></div>
   <div class="wall block" style="top: 0px; left: 500px;"></div>
-  <!-- Add more walls as needed -->
 </div>
 
 <div>
@@ -124,8 +123,11 @@
       // Check if the object has reached the goal
       if (newX == 550 && newY == 0) {
         setTimeout(() => {
-          alert('Clear!');
-        }, 300); // Delay the alert for a better user experience
+                    alert('철컥! 어디서 문이 열렸다.');
+                }, 300);
+                setTimeout(() => {
+                    location.href = "../[8]관공서지하복도/GameBase.html";
+                }, 500);
       }
     }
   }
