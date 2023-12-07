@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #container {
+      position: relative;
+      width: 700px;
+      height: 350px;
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+
+    .block {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #object {
+      background-color: red;
+    }
+
+    .wall {
+      background-color: black;
+    }
+
+    #goal {
+      background-color: green;
+      top: 000px;
+      left: 550px;
+    }
+  </style>
+  <title>Maze Game</title>
+</head>
+<body>
+
+<div id="container">
+  <div id="object" class="block"></div>
+  <div id="goal" class="block"></div>
+  <div class="wall block" style="top: 0px; left: 50px;"></div>
+  <div class="wall block" style="top: 50px; left: 50px;"></div>
+  <div class="wall block" style="top: 100px; left: 50px;"></div>
+  <div class="wall block" style="top: 100px; left: 100px;"></div>
+  <div class="wall block" style="top: 200px; left: 50px;"></div>
+  <div class="wall block" style="top: 250px; left: 50px;"></div>
+  <div class="wall block" style="top: 200px; left: 100px;"></div>
+  <div class="wall block" style="top: 250px; left: 100px;"></div>
+  <div class="wall block" style="top: 50px; left: 200px;"></div>
+  <div class="wall block" style="top: 100px; left: 200px;"></div>
+  <div class="wall block" style="top: 150px; left: 200px;"></div>
+  <div class="wall block" style="top: 200px; left: 200px;"></div>
+  <div class="wall block" style="top: 250px; left: 200px;"></div>
+  <div class="wall block" style="top: 0px; left: 300px;"></div>
+  <div class="wall block" style="top: 50px; left: 300px;"></div>
+  <div class="wall block" style="top: 150px; left: 300px;"></div>
+  <div class="wall block" style="top: 200px; left: 300px;"></div>
+  <div class="wall block" style="top: 250px; left: 300px;"></div>
+  <div class="wall block" style="top: 300px; left: 350px;"></div>
+  <div class="wall block" style="top: 250px; left: 350px;"></div>
+  <div class="wall block" style="top: 200px; left: 350px;"></div>
+  <div class="wall block" style="top: 50px; left: 400px;"></div>
+  <div class="wall block" style="top: 100px; left: 400px;"></div>
+  <div class="wall block" style="top: 150px; left: 400px;"></div>
+  <div class="wall block" style="top: 150px; left: 450px;"></div>
+  <div class="wall block" style="top: 150px; left: 500px;"></div>
+  <div class="wall block" style="top: 250px; left: 450px;"></div>
+  <div class="wall block" style="top: 250px; left: 500px;"></div>
+  <div class="wall block" style="top: 250px; left: 550px;"></div>
+  <div class="wall block" style="top: 250px; left: 600px;"></div>
+  <div class="wall block" style="top: 200px; left: 600px;"></div>
+  <div class="wall block" style="top: 150px; left: 600px;"></div>
+  <div class="wall block" style="top: 100px; left: 600px;"></div>
+  <div class="wall block" style="top: 50px; left: 600px;"></div>
+  <div class="wall block" style="top: 50px; left: 550px;"></div>
+  <div class="wall block" style="top: 50px; left: 500px;"></div>
+  <div class="wall block" style="top: 0px; left: 500px;"></div>
+  <!-- Add more walls as needed -->
+</div>
+
+<div>
+  <button onclick="move('up')">Up</button>
+  <button onclick="move('down')">Down</button>
+  <button onclick="move('left')">Left</button>
+  <button onclick="move('right')">Right</button>
+</div>
+
+<script>
+  const object = document.getElementById('object');
+  const container = document.getElementById('container');
+  const walls = document.querySelectorAll('.wall');
+  const goal = document.getElementById('goal');
+
+  function move(direction) {
+    const currentX = parseInt(object.style.left) || 0;
+    const currentY = parseInt(object.style.top) || 0;
+    const step = 50;
+
+    let newX = currentX;
+    let newY = currentY;
+
+    switch (direction) {
+      case 'up':
+        newY = Math.max(currentY - step, 0);
+        break;
+      case 'down':
+        newY = Math.min(currentY + step, container.clientHeight - object.clientHeight);
+        break;
+      case 'left':
+        newX = Math.max(currentX - step, 0);
+        break;
+      case 'right':
+        newX = Math.min(currentX + step, container.clientWidth - object.clientWidth);
+        break;
+    }
+
+    // Check for collisions with walls
+    if (!isCollision(newX, newY)) {
+      object.style.left = newX + 'px';
+      object.style.top = newY + 'px';
+
+      // Check if the object has reached the goal
+      if (newX == 550 && newY == 0) {
+        setTimeout(() => {
+          alert('Clear!');
+        }, 300); // Delay the alert for a better user experience
+      }
+    }
+  }
+
+  function isCollision(x, y) {
+    for (const wall of walls) {
+      const wallX = parseInt(wall.style.left) || 0;
+      const wallY = parseInt(wall.style.top) || 0;
+
+      if (
+        x < wallX + wall.clientWidth &&
+        x + object.clientWidth > wallX &&
+        y < wallY + wall.clientHeight &&
+        y + object.clientHeight > wallY
+      ) {
+        return true; // Collision detected
+      }
+    }
+    return false; // No collision
+  }
+</script>
+
+</body>
+</html>
