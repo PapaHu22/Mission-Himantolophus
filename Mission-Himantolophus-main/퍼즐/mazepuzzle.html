@@ -117,15 +117,18 @@
     }
 
     // Check for collisions with walls
+
     if (!isCollision(newX, newY)) {
       object.style.left = newX + 'px';
       object.style.top = newY + 'px';
 
       // Check if the object has reached the goal
+      
       if (newX == 550 && newY == 0) {
         setTimeout(() => {
           alert('Clear!');
         }, 300); // Delay the alert for a better user experience
+        }, 300); 
       }
     }
   }
