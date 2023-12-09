@@ -64,7 +64,7 @@ p{
 #Message{
     border:20px ridge rgb(90, 11, 11);
     border-radius : 5px 40px 80px;
-    width: 90%;
+    width: 85%;
     padding: 50px;
     position: fixed; top:80%; 
     font-size: large;
@@ -86,9 +86,9 @@ p{
     height: 800px; 
     position: fixed; 
     top: 50%; 
-    left: 50%; 
+    left: 15%; 
     transform: translate(-50%, -50%); 
-    z-index: 1; /
+    z-index: -1; /
 }
 
 #Place{
@@ -98,13 +98,4 @@ p{
     position: fixed; top:0%; left: 0%; 
     font-size: medium;
     text-align: center;
-}
-
-/* 아이템 이미지 스타일 */
-.item-image {
-    width: 60px; /* 이미지 너비 */
-    height: 60px; /* 이미지 높이 */
-    margin: 5px; /* 이미지 간 간격 */
-    border: 1px solid #ccc; /* 이미지 테두리 */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
 }

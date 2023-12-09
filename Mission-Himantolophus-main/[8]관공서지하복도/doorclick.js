@@ -42,8 +42,7 @@ function mouseFunc(event) {
     }
     else if(event.clientX >1278 && event.clientX <1422
         &&event.clientY>330&&event.clientY<680){
-            alert("4번째 문");
-
+            
             if(door_4 == false){
                 location.href = "../puzzleMap/thirdp.html";
                 door_4 = true;
@@ -54,7 +53,8 @@ function mouseFunc(event) {
     }
     else if(event.clientX >1629 && event.clientX <1768
         &&event.clientY>330&&event.clientY<680){
-
+            door_5 =true;
+            /*
             if(door_5 == false){
                 location.href = "../puzzleMap/fifthp.html";
                 door_5 = true;
@@ -62,5 +62,6 @@ function mouseFunc(event) {
             }else{
             alert("이미 문제를 풀어 접근할 필요는 없다.");
             }
+            */
     }
   }

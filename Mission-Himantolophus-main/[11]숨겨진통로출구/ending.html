@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>엔딩</title>
+    <style>
+        /* 기본적인 스타일링 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .title {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .team-info {
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<script src="../GameBase/GameBase.js">
+</script>
+<script>localStorage.setItem('Mapinfo', 12);</script>
+<body>
+    <div class="title">HIMANTOLOPHUS</div>
+
+    <div class="team-info" id="teamInfo">
+        <p>팀 이름: 나거무아 <br><br><br>
+        박두림: 홈페이지 제작 <br>
+    박태혁: 게임&배경 제작<br>
+박정호: 아이콘 제작<br>
+송태환: 아트&게임 제작
+</p>
+    </div>
+
+    <script>
+        
+        setTimeout(function() {
+            document.getElementById('teamInfo').style.opacity = 1;
+        }, 3000); 
+    </script>
+</body>
+</html>
