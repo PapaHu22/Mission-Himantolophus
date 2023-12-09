@@ -5,19 +5,39 @@
 <title>작전명 : Himantolophus</title>
 </head>
 <body>
+    <script src="../GameBase/GameBase.js"></script>
     <style>
         @import url(GameMain.css);
     </style>
 
     <div class="Background">
         <img src="Himantolophus.jpg" alt = "메인화면_배경">
+        
         <div class="Button">
             <button id="startButton" class="start" onclick="location.href='../[1]건물입구/GameBase_2.html'">Start</button>
-            <button id="loadButton" class="start" onclick="location.href='../[1]건물입구/GameBase.html'">Load</button>
-
-
+            <button id="loadButton" class="start">Load</button>
         </div>
     </div>
 
+    <script>
+        document.getElementById('loadButton').onclick = function() {
+        let Mapinfo = localStorage.getItem('Mapinfo');
+            if(Mapinfo === '3'){
+                window.location.href = '../[3]계단탈출/GameBase.html';
+            }
+            if (Mapinfo === '4') {
+            window.location.href = '../[4]11층복도/GameBase.html';
+            } 
+            if(Mapinfo === '6'){
+                window.location.href = '../[6]관공서방/GameBase.html';
+            }
+            if(Mapinfo === '9'){
+                window.location.href = '../[9]숨겨진통로앞/GameBase.html';
+            }
+            if(Mapinfo === '12'){
+                window.location.href = '../[11]숨겨진통로출구/ending.html';
+            }
+        }
+    </script>
 </body>
 </html>

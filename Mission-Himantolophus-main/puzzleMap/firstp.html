@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kor">
+<script src = "../[8]관공서지하복도/doorclick.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Color Game</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: auto;
+    }
+
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+
+<table id="game-table">
+  <tr>
+    <td onclick="changeColor(0)"></td>
+    <td onclick="changeColor(1)"></td>
+    <td onclick="changeColor(2)"></td>
+  </tr>
+  <tr>
+    <td onclick="changeColor(3)"></td>
+    <td onclick="changeColor(4)"></td>
+    <td onclick="changeColor(5)"></td>
+  </tr>
+  <tr>
+    <td onclick="changeColor(6)"></td>
+    <td onclick="changeColor(7)"></td>
+    <td onclick="changeColor(8)"></td>
+  </tr>
+</table>
+
+<script>
+  function changeColor(cell) {
+    const cells = document.getElementsByTagName('td');
+
+    const relatedCells = [
+      [1, 3], [0, 2, 4], [1, 5],
+      [0, 4, 6], [1, 3, 5, 7], [2, 4, 8],
+      [3, 7], [4, 6, 8], [5, 7]
+    ];
+
+
+    
+    cells[cell].classList.toggle('pink');
+
+    relatedCells[cell].forEach(relatedCell => {
+      cells[relatedCell].classList.toggle('pink');
+    });
+    checkAllPink(cells);
+  }
+
+  function checkAllPink(cells) {
+    const allPink = Array.from(cells).every(cell => cell.classList.contains('pink'));
+    if (allPink) {
+        setTimeout(()=>{
+            alert('철컥! 어디서 문이 열렸다.');
+        },300)
+        setTimeout(()=>{
+            location.href = "../[8]관공서지하복도/GameBase.html";
+        },500)
+        
+    }
+  }
+</script>
+
+</body>
+</html>

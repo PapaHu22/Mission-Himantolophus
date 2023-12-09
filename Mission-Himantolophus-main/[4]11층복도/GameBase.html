@@ -12,16 +12,15 @@ User
 <meta charset="utf-8">
 <title>장소: 11층 복도</title>
 </head>
-<script src="../GameBase/GameBase.js"></script>
+<script src="../GameBase/GameBase.js">
+</script>
+<script>localStorage.setItem('Mapinfo', 4);</script>
 <body>
 <div class="Background">
     <div class="Button">
         <input type="button" class="arrleft" onclick="location.href='../[5]공주의방/GameBase_1.html'">
         <input type="button" class="arrright" onclick="alert('이 방이 아니다.')">
         <input type="button" class="arrup" onclick="alert('내려갈 상황이 아니야. 공주님 방을 찾아야해')">
-    </div>
-    <div class = "SlotInfo">
-        <p id = "Slot">안에 아이템 넣기</p>
     </div>
 
     <div class = "PlaceInfo">
@@ -35,6 +34,7 @@ User
     <div class = "Name">
         <p id = "Name">반</p>
     </div>
+    <img src="../CharImg/van.png" alt="캐릭터 이미지" class="character-image">
     <div class = "Message">
         <p id = "Message">11층 구석진 방...</p>
     </div>

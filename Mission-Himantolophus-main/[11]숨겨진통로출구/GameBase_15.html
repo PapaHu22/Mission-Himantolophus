@@ -4,7 +4,7 @@ User
     <style>
         @import url(../GameBase/GameBase.css);
         .Background{
-            background-image: url("../back_image/통로출구.png");
+            background-image: url("../back_image/ending.png");
         }
     </style>
 
@@ -16,12 +16,8 @@ User
 <body>
 <div class="Background">
     <div class="Button">
-    
+        <input type="button" class="nextmessage" onclick="location.href='../[11]숨겨진통로출구/end.html'">
     </div>
-    <div class = "SlotInfo">
-        <p id = "Slot">안에 아이템 넣기</p>
-    </div>
-
     <div class = "PlaceInfo">
         <p id = "Place" >
             <script>
@@ -33,6 +29,7 @@ User
     <div class = "Name">
         <p id = "Name">칼릭</p>
     </div>
+    <img src="../CharImg/T.png" alt="캐릭터 이미지" class="character-image">
     <div class = "Message">
         <p id = "Message">넵, 요원 칼릭, 임무 'HIMANTOLOPHUS(초롱아귀)' 완료했습니다. 현장 조작시작하겠습니다.</p>
     </div>
