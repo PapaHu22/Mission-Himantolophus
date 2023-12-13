@@ -106,8 +106,11 @@
       const isWin = pieces.every((piece, index) => piece.textContent == 0 || piece.textContent == index + 1);
       if (isWin) {
         setTimeout(() => {
-            alert('퍼즐을 풀었습니다!!');
+          alert('삐리릭- 세번째 문의 보안장치가 풀리는 소리가 난다.');
         }, 300);
+        setTimeout(() => {
+                    location.href = "../[8]관공서지하복도/GameBase.html";
+                }, 500);
       }
     }
   });

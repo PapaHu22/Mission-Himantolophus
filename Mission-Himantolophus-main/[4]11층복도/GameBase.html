@@ -8,6 +8,7 @@ User
         }
     </style>
 
+    <script src="ItemClick.js"></script>
 <head>
 <meta charset="utf-8">
 <title>장소: 11층 복도</title>
@@ -16,9 +17,9 @@ User
 </script>
 <script>localStorage.setItem('Mapinfo', 4);</script>
 <body>
-<div class="Background">
+<div class="Background" onmousedown="mouseFunc(event)">
     <div class="Button">
-        <input type="button" class="arrleft" onclick="location.href='../[5]공주의방/GameBase_1.html'">
+        <input type="button" class="arrleft" onmousedown="mouseFuncRoom(event)">
         <input type="button" class="arrright" onclick="alert('이 방이 아니다.')">
         <input type="button" class="arrup" onclick="alert('내려갈 상황이 아니야. 공주님 방을 찾아야해')">
     </div>
@@ -36,7 +37,7 @@ User
     </div>
     <img src="../CharImg/van.png" alt="캐릭터 이미지" class="character-image">
     <div class = "Message">
-        <p id = "Message">11층 구석진 방...</p>
+        <p id = "Message">11층 구석진 방이라..</p>
     </div>
 </div>
 

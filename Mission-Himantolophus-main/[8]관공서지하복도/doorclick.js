@@ -10,6 +10,7 @@ function mouseFunc(event) {
     console.log(event.clientX, event.clientY);
     
     if(door_1 && door_2 && door_4 && door_5){
+        alert('모든 문의 문제가 풀렸다! 이제 3번쨰 통로를 갈 수 있다.');
         exitdoor = true;
     }
     if(event.clientX >150 && event.clientX <300
@@ -53,15 +54,12 @@ function mouseFunc(event) {
     }
     else if(event.clientX >1629 && event.clientX <1768
         &&event.clientY>330&&event.clientY<680){
-            door_5 =true;
-            /*
             if(door_5 == false){
-                location.href = "../puzzleMap/fifthp.html";
+                location.href = "../puzzleMap/forthp.html";
                 door_5 = true;
                 localStorage.setItem('door_5', door_5.toString())
             }else{
             alert("이미 문제를 풀어 접근할 필요는 없다.");
             }
-            */
     }
   }

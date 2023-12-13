@@ -8,6 +8,7 @@ User
         }
     </style>
 
+<script src = "ItemClick.js"></script>
 <head>
 <meta charset="utf-8">
 <title>장소: 관공서 방</title>
@@ -15,7 +16,7 @@ User
 <script src="../GameBase/GameBase.js"></script>
 <script>localStorage.setItem('Mapinfo', 6);</script>
 <body>
-<div class="Background">
+<div class="Background" onmousedown="mouseFunc(event)">
     <div class="Button">
         <input type="button" class="arrup" onclick="location.href='../[7]관공서지하입구/GameBase_1.html'">
     </div>
