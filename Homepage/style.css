@@ -1,70 +1,107 @@
-.back_img{
+/* notice hover로 커서가 notice위에 있음을 보여줌. */
+.img_notc:hover{
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+/* 모든 img태그에 적용  */
+img{
+    
+    margin-bottom: -700px;
+}
+
+
+/* 세계관 설명 이미지 */
+.img1 > img{
+    position:relative;
+    top: -2000px;
+    right: -100px;
+    
+}
+
+
+/* 웹게임 스토리 설명 */
+.img_world{
+    position: relative;
+    margin-top: -1350px;
+    margin-left: 100px;
+    
+    z-index: 1;
+}
+
+.img_game{
+    position: relative;
+    margin-top: 650px;
+    margin-left: 100px;
+    /* margin-right: -100px; */
+    z-index: 1;
+}
+
+/* 스토리 항목 배경 이미지2 */
+.back_img2{
+    position: relative;
+    top: 695px;
+    z-index: 1;
     filter: brightness(30%);
 }
 
-
-form{
-    margin: 0;
-    padding: 0px;
+/* 스토리 항목에 있는 지도 */
+.img2{
+    position: relative;
+    margin-top: -2050px;
+    margin-left: 800px;
+    /* margin-right: -100px; */
+    z-index: 1;
 }
 
+/* 지도에 커서 올리면 설명 */
+.img2:hover{
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+/* 스토리 항목 배경 이미지 css */
+.back_img{
+    filter: brightness(30%);
+    right: 30px;
+}
+
+/* 홈페이지 웹게임 스토리 다운로드 항목 css */
 a{
     text-decoration: none;
     color: white;
+    padding: 20px;
+
 }
 
+/* a:hover{
+
+    color: white;
+} */
+
+/* 상단 탭부분 */
 .anything{
     display: flex;
+    text-align: center;
     justify-content: space-between;
     align-items: center;
     background-color: #000101;
-    padding: 8px 12px;
+    font-style: italic;
 }
 
+/* 로고 */
 .anything_logo{
     font-size: 24px;
     color: var(--text-color);
+    position: relative;
+    top: -340px;
+    z-index: 1;
 }
 
-.anything_logo{
-    color: #d49466;
-}
-
-.anything_menu{
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-}
-
-.anything_menu li:hover{
-    background-color: #d49466;
-    border-radius: 4px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.anything_menu li{
-    padding: 8px 12px;
-}
-
-.anything_icons{
-    list-style: none;
-    color: white;
-    display: flex;
-    padding-left: 0;
-}
-
-.anything_icons li{
-    padding: 8px 12px;
-}
-
-.anything_menubarbutton{
-    display: none;
+/* 메인페이지 이미지 */
+.notice{
     position: absolute;
-    right: 32px;
-    font-size: 24px;
-    color: #d49466;
+    width: 384px;
+    height: 216px;
 }
-
 
